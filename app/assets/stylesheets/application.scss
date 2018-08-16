@@ -1,0 +1,346 @@
+@import "bootstrap-sprockets";
+@import "bootswatch/flatly/variables";
+@import "bootstrap";
+@import "rails_bootstrap_forms";
+@import "bootswatch/flatly/bootswatch";
+
+.header {
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.qualities-index {
+  display: flex;
+  justify-content: space-around;
+  height: 400px;
+}
+//fit content?
+.gradient {
+  border-width: 4px;
+  border-style: solid;
+  margin: 5px;
+  border-radius: 5px;
+  height: fit-content;
+  // box-shadow: 3px 3px 3px 3px #dcdcdc;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  -o-box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+.purpose {
+  color: white;
+  background: #9e5fa0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px;
+  font-size: 18px;
+}
+
+.purpose-b {
+  border-color: #9e5fa0;
+}
+
+.empowerment {
+  color: white;
+  background: #5bc9b0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px;
+  font-size: 18px;
+}
+
+.collaboration {
+  color: white;
+  background: #e6c937;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px;
+  font-size: 18px;
+}
+
+.photo {
+  // margin-left: 60px;
+  width: 120px;
+  height: 120px;
+}
+
+.photo-center {
+  display: flex;
+  justify-content: center;
+  position: relative; //why won't this center??
+}
+
+.score {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: bold;
+}
+.score-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.dot-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  // position: relative;
+}
+
+.yo {
+  border-right: solid;
+  border-left-style: hidden;
+  border-top-style: hidden;
+  border-bottom: hidden;
+  border-right-style: dashed;
+  border-right-color: red;
+  color: white;
+}
+
+.sticky {
+  position: absolute;
+}
+
+.bar {
+  background-color: pink;
+  width: 1vw;
+  height: 0.5vw;
+  // position:
+}
+
+.description {
+  width: 23vw;
+  padding-right: 12px;
+  font-size: 11px;
+  padding-left: 12px;
+}
+
+.button-description {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  color: #90c4f9;
+  transition: all 0.5s;
+  font-size: 12px;
+}
+
+// * the code in between the asterisked comments is in order to make
+// the "read more/read less" button a little friendlier, with an
+// animated arrow :)
+.button-description span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.button-description span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button-description:hover span {
+  padding-right: 25px;
+}
+
+.button-description:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+//*
+
+.button-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.indiv-button1 {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  outline: none;
+  float: left;
+  // margin: 0 8px 8px 0;
+  margin-left: 34px;
+  padding: 0 4em;
+  height: 3.5em;
+
+  // text: {
+  //   // decoration: none;
+  //   // shadow: 0 1px 3px rgba(black, 0.35);
+  // }
+  letter-spacing: 0.04em;
+  color: #18bc9c;
+  background: white;
+  border: solid 1px #18bc9c;
+  border-radius: 7px;
+  @include transition(0.35s ease all);
+
+  &:hover {
+    background: url("./heart.png") 40px -38px no-repeat;
+    // color: white;
+    border: 2px solid yellow;
+    box-shadow: 0 0 3px rgba(black, 0.5) inset;
+    color: black;
+
+    //up until the end of the next keyframes block is in order to get the buttons to wiggle!
+    animation: shake 0.5s;
+    animation-iteration-count: 0.5;
+  }
+
+  @keyframes shake {
+    0% {
+      transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+      transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+      transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+      transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+      transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+      transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+      transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+      transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+      transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+      transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+      transform: translate(1px, -2px) rotate(-1deg);
+    }
+  }
+
+  &:hover {
+    line-height: 9em;
+  }
+
+  &:before {
+    content: attr(data-text);
+    color: #deeff5;
+    position: absolute;
+    top: -2.75em;
+  }
+}
+
+.indiv-button2 {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  outline: none;
+  float: left;
+  // margin: 0 8px 8px 0;
+  margin-left: 34px;
+  padding: 0 4em;
+  height: 3.5em;
+
+  // text: {
+  //   // decoration: none;
+  //   // shadow: 0 1px 3px rgba(black, 0.35);
+  // }
+  letter-spacing: 0.04em;
+  color: #18bc9c;
+  background: white;
+  border: solid 1px #18bc9c;
+  border-radius: 7px;
+  @include transition(0.35s ease all);
+
+  &:hover {
+    background: url("./untitled-1_263") 10px -70px no-repeat;
+    // color: white;
+    border: 2px solid yellow;
+    box-shadow: 0 0 3px rgba(black, 0.5) inset;
+    color: black;
+
+    //up until the end of the next keyframes block is in order to get the buttons to wiggle!
+    animation: shake 0.5s;
+    animation-iteration-count: 0.5;
+  }
+
+  @keyframes shake {
+    0% {
+      transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+      transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+      transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+      transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+      transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+      transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+      transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+      transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+      transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+      transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+      transform: translate(1px, -2px) rotate(-1deg);
+    }
+  }
+
+  &:hover {
+    line-height: 9em;
+  }
+
+  &:before {
+    content: attr(data-text);
+    color: #deeff5;
+    position: absolute;
+    top: -2.75em;
+  }
+}
