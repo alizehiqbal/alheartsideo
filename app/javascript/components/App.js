@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Intimisia from "./qualities_index.js";
+import HeartIDEO from "./qualities_index.js";
 
 class App extends Component {
   render() {
@@ -7,7 +7,7 @@ class App extends Component {
       <div className="row">
         <div className="col-md-12">
           <h2 className="header">CREATIVE QUALITIES</h2>
-          <Intimisia />
+          <HeartIDEO />
         </div>
       </div>
     );
